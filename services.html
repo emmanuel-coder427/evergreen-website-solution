@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Welcome Ever green office paper solutions">
+  <meta name="keywords" content="Ever green office paper solutions Nairobi,Kenya">
+ <title>About Us - Ever Green</title>
+ <link rel="stylesheet" href="css/style.css">
+</head>
+ <body> 
+    <header>
+        <nav id="navbar">
+            <h1 class="logo"><a href="index.html">Ever Green Office Paper Solutions</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="sustainability.html">sustainability</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+                </ul>
+            </header>
+            <h1>Our services</h1>
+            <img src="img/pexels-robertkso-12492301.jpg"style="width: 100%; max-width: 2000px; height: 400px;  display:stretch;"> 
+                <ul>
+            <li> <h1> Paper Collection and Recycling</h1></li>
+        <img src="img/pexels-robertkso-12492301.jpg"style="width: 100%; max-width: 2000px; height: 400px; border-radius: 300px; display:stretch;">
+    </div>
+        <li><h2> Document Shredding<h2></li>
+        <img src="img/istockphoto-522650723-1024x1024.jpg"style="width: 100%; max-width: 2000px; height: 400px; border-radius: 3000px; display:stretch;">
+
+        <li><h2>Eco-Friendly Paper Products</h2></li>
+        <img src="img/pexels-robertkso-12492301.jpg"style="width: 100%; max-width: 2000px; height: 400px; border-radius: 300px; display:stretch;">
+    </ul>
+</section>
+<footer>
+    <p>&copy; 2025 Ever Green Office Paper Solutions | All Rights Reserved</p>
+</footer>
+<script>
+    console.log("JavaScript Loaded"); // Debugging to check if JavaScript is running
+
+    function toggleDetails(serviceNumber) {
+        let details = document.getElementById('details' + serviceNumber);
+        if (details.style.display === 'none' || details.style.display === '') {
+            details.style.display = 'block';
+        } else {
+            details.style.display = 'none';
+        }
+    }
+
+    // Image Slideshow for services
+    let imageIndex = 0;
+    let images = [
+        "img/pexels-robertkso-12492301.jpg",
+        "img/istockphoto-522650723-1024x1024.jpg",
+        "img/pexels-robertkso-12492301.jpg"
+    ];
+
+    function changeImage() {
+        console.log("Changing Image..."); // Debugging line
+        document.getElementById("service1").src = images[imageIndex];
+        document.getElementById("service2").src = images[(imageIndex + 1) % images.length];
+        document.getElementById("service3").src = images[(imageIndex + 2) % images.length];
+
+        imageIndex = (imageIndex + 1) % images.length;
+    }
+
+    // Check if images exist before running the script
+    window.onload = function () {
+        if (document.getElementById("service1")) {
+            console.log("Images loaded, starting slideshow...");
+            setInterval(changeImage, 3000); // Change images every 3 seconds
+        } else {
+            console.error("Images not found. Check paths.");
+        }
+    };
+</script>
+ </body>
+</html>
